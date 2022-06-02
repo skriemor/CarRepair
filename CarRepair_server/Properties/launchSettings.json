@@ -12,7 +12,7 @@
     "CarRepair_server": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/CarRecord",
       "applicationUrl": "http://localhost:5297",
       "environmentVariables": {
@@ -21,7 +21,7 @@
     },
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/CarRecord",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
