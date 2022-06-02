@@ -1,0 +1,28 @@
+﻿<Window x:Class="CarRepair_Dispatch_Client.QueryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarRepair_Dispatch_Client"
+        mc:Ignorable="d"
+        Title="Cars to repair" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="15, 15, 15, 15" Content="Repairs&#xD;&#xA;" HorizontalAlignment="Center"/>
+        <ListBox x:Name="CarsListBox" Grid.Row="1" Grid.Column="0" Margin="15" SelectionMode="Single" SelectionChanged="CarList_SelectionChanged"/>
+
+        <ListBox x:Name="ButtonsListBox" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="15">
+            <ListBoxItem>
+                <Button  FontSize="20" x:Name="CreateRecordButton" Content="Create" ClickMode="Press" Click="CreateRecordEvent"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15, 15, 20, 20"/>
+            </ListBoxItem>
+        </ListBox>
+    </Grid>
+</Window>

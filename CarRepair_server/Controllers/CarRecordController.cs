@@ -14,7 +14,7 @@ namespace CarRepair_server.Controllers
             return Ok(CarRecordRepository.GetCarRecords());
         }
 
-        [HttpGet("{owner}")]
+        [HttpGet("{id:int}")]
         public ActionResult<CarRecord> Get(int id)
         {
             var record = CarRecordRepository.GetCarRecords().FirstOrDefault(x => x.id == id);
@@ -24,7 +24,7 @@ namespace CarRepair_server.Controllers
         {
             var orderedrecords = records.OrderBy(record => record.id);
             int newid = 0;
-            foreach (var e in records)
+            foreach (var e in orderedrecords)
             {
                 if (newid == e.id)
                 {
@@ -42,6 +42,8 @@ namespace CarRepair_server.Controllers
         {
             var records = CarRecordRepository.GetCarRecords().ToList();
 
+            record.AcceptDate = DateTime.Now;
+            record.Repair_status = "Accepted";
             record.id = GenerateId(records);
             records.Add(record);
 
@@ -56,10 +58,12 @@ namespace CarRepair_server.Controllers
             var recordToUpdate = records.FirstOrDefault(x => x.id == record.id);
             if (recordToUpdate != null)
             {
+                recordToUpdate.Repair_status = record.Repair_status;
                 recordToUpdate.Name = record.Name;
                 recordToUpdate.Car_lpn = record.Car_lpn;
                 recordToUpdate.Problem_desc = record.Problem_desc;
                 recordToUpdate.Car_type = record.Car_type;
+                recordToUpdate.AcceptDate = DateTime.Now;
 
                 CarRecordRepository.SaveCarRecords(records);
                 return Ok();
@@ -69,7 +73,7 @@ namespace CarRepair_server.Controllers
                 return NotFound();
             }
         }
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
             var records = CarRecordRepository.GetCarRecords().ToList();
