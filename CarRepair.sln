@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepair_server", "CarRepair_server\CarRepair_server.csproj", "{83586EC0-E1D5-4A63-AC48-E849FB8F2FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepair_server", "CarRepair_server\CarRepair_server.csproj", "{83586EC0-E1D5-4A63-AC48-E849FB8F2FF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRepair_CommonCL", "CarRepair_CommonCL\CarRepair_CommonCL.csproj", "{29CC1C81-BBEF-4EC5-872E-C97146C00AAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepair_CommonCL", "CarRepair_CommonCL\CarRepair_CommonCL.csproj", "{29CC1C81-BBEF-4EC5-872E-C97146C00AAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRepair_query_Client", "CarRepair_query_Client\CarRepair_query_Client.csproj", "{5173FA0B-7D0B-4EFA-BA6F-ED7B40AAC0B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{29CC1C81-BBEF-4EC5-872E-C97146C00AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29CC1C81-BBEF-4EC5-872E-C97146C00AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29CC1C81-BBEF-4EC5-872E-C97146C00AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5173FA0B-7D0B-4EFA-BA6F-ED7B40AAC0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5173FA0B-7D0B-4EFA-BA6F-ED7B40AAC0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5173FA0B-7D0B-4EFA-BA6F-ED7B40AAC0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5173FA0B-7D0B-4EFA-BA6F-ED7B40AAC0B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

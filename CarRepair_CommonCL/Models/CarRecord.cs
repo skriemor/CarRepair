@@ -14,10 +14,20 @@ namespace CarRepair_CommonCL.Models
         //lpn ~license plate number
         public string Car_lpn { get; set; }
         public string Problem_desc { get; set; }
+        public string Repair_status { get; set; }
+        public DateTime AcceptDate { get; set; }
 
         public override string ToString()
         {
-            return $"{id}, {Name}, {Car_type}: {Car_lpn} - {Problem_desc}";
+            if (Repair_status == null)
+            {
+                if (AcceptDate == default(DateTime))
+                {
+                    return $"{id}, {Name}, {Car_type}: {Car_lpn} - {Problem_desc}";
+                }
+                return $"{id}, {Name}, {Car_type}: {Car_lpn} - {Problem_desc} - {AcceptDate.ToString()}";
+            }
+            return $"{id}, {Name}, {Car_type}: {Car_lpn} - {Problem_desc} - {AcceptDate.ToString()} {Repair_status}";
         }
     }
 }
